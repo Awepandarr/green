@@ -1,6 +1,6 @@
 import time
-import folium
 import requests
+import csv
 from dotenv import load_dotenv
 import os
 
@@ -8,52 +8,108 @@ import os
 load_dotenv(dotenv_path='api.env')  # Adjust if your file is api.env or .env
 api_key = os.getenv("GOOGLE_API_KEY")
 
-def plot_green_spaces_on_map(api_key, location="53.483959,-2.244644", radius=5000, type="park"):
+def save_green_spaces_to_csv(api_key, location="53.483959,-2.244644", radius=10000, types = {
+    "park": [
+        "Urban park",
+        "Community park",
+        "Public park",
+        "Playground",
+        "Sports field",
+        "Picnic area",
+        "Recreational park",
+        "Walking trail",
+        "Skate park",
+        "Dog park",
+        "Nature reserve park",
+        "Adventure park",
+        "Green space park",
+        "Park benches",
+        "Botanical park",
+        "Green"
+    ],
+    "garden": [
+        "Botanical garden",
+        "Community garden",
+        "Urban garden",
+        "Herb garden",
+        "Flower garden",
+        "Vegetable garden",
+        "Rooftop garden",
+        "Xeriscape garden",
+        "Japanese garden",
+        "Herbaceous garden",
+        "Tropical garden",
+        "Rose garden",
+        "Wildlife garden",
+        "Greenhouse garden",
+        "Urban farming"
+    ],
+    "natural_feature": [
+        "Forest",
+        "Wetland",
+        "Riverbank",
+        "Beach",
+        "Mountain",
+        "Hillside",
+        "Stream",
+        "Coastal area",
+        "Wilderness area",
+        "Cliff",
+        "Valley",
+        "Lake",
+        "Wetlands",
+        "Sand dune",
+        "Nature trail"
+    ]
+}, keyword="green space"):
     url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
-    params = {
-        "location": location,
-        "radius": radius,
-        "type": type,
-        "key": api_key
-    }
+    
+    # Open a CSV file to write the data
+    with open('green_spaces.csv', mode='w', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file)
+        
+        # Write the header row
+        writer.writerow(["Name", "Latitude", "Longitude", "Type"])
 
-    # Create a map centered around Manchester
-    m = folium.Map(location=[53.483959, -2.244644], zoom_start=12)
+        # Loop through the place types
+        for place_type in types:
+            params = {
+                "location": location,
+                "radius": radius,
+                "type": place_type,
+                "keyword": keyword,  # Use keyword for broader search results
+                "key": api_key
+            }
 
-    while True:
-        try:
-            response = requests.get(url, params=params)
-            response.raise_for_status()  # Raises an HTTPError if the HTTP request returned an unsuccessful status code
-            data = response.json()
+            while True:
+                response = requests.get(url, params=params)
+                data = response.json()
 
-            if data["status"] == "OK":
-                for space in data["results"]:
-                    lat = space["geometry"]["location"]["lat"]
-                    lng = space["geometry"]["location"]["lng"]
-                    name = space.get("name")
+                if data["status"] == "OK":
+                    # Write each green space to the CSV file
+                    for space in data["results"]:
+                        name = space.get("name")
+                        lat = space["geometry"]["location"]["lat"]
+                        lng = space["geometry"]["location"]["lng"]
+                        type_of_place = space.get("types", ["Unknown"])[0]  # Getting the first type if available
+                        
+                        # Write the details into the CSV file
+                        writer.writerow([name, lat, lng, type_of_place])
 
-                    # Add a marker for each green space
-                    folium.Marker([lat, lng], popup=name).add_to(m)
-
-                # Check for next page token (pagination)
-                if "next_page_token" in data:
-                    params["pagetoken"] = data["next_page_token"]
-                    time.sleep(2)  # wait a bit for the token to activate
+                    # Pagination: check if there's a next page of results
+                    if "next_page_token" in data:
+                        params["pagetoken"] = data["next_page_token"]
+                        time.sleep(2)  # Wait a bit for the next page token to activate
+                    else:
+                        break
                 else:
+                    print("Error:", data["status"], data.get("error_message", ""))
                     break
-            else:
-                print("Error:", data["status"], data.get("error_message", ""))
-                break
-        except requests.exceptions.RequestException as e:
-            print("An error occurred with the request:", e)
-            break
 
-    # Save map to an HTML file
-    m.save("green_spaces_map.html")
-    print("Map has been saved to 'green_spaces_map.html'")
+    print("Green spaces data has been saved to 'green_spaces.csv'.")
 
 # Run the function
 if api_key:  # Ensure that the API key is not empty
-    plot_green_spaces_on_map(api_key)
+    save_green_spaces_to_csv(api_key)
 else:
     print("API key is missing. Please add it to your .env file.")

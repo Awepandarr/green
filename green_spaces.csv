@@ -1,21 +1,94 @@
-Name,Address,Latitude,Longitude
-Alexandra Park,"180 Russell Street, Manchester",53.45156209999999,-2.249320399999999
-Whitworth Park,"Oxford Road, Manchester",53.45904340000001,-2.230085
-Buile Hill Park,"Eccles Old Road, Salford",53.49008739999999,-2.3032413
-Carlton Club,"Rowan Lodge, Rowan Lodge 113 Carlton Road Greater, 113 Carlton Road, Greater, Whalley Range, Manchester",53.451629,-2.263239999999999
-Victoria Mill Park,"1 Bourdon Street, Manchester",53.4891708,-2.2155931
-Swinton Grove Park,"Swinton Grove, Manchester",53.4626959,-2.2207579
-Gartside Gardens,"Kincardine Road, Manchester",53.4702889,-2.2304011
-Smedley Lane Playing Fields,"Smedley Lane, Cheetham Hill, Manchester",53.5058288,-2.2333343
-Hullard Park,"49 Henrietta Street, Manchester",53.46198509999999,-2.2676868
-Platt Fields Park,Manchester,53.44805709999999,-2.2249179
-Sow the City,"36-40 Edge Street, Manchester",53.4841714,-2.2363568
-St Stephen's Gardens,"6AY, Saint Stephen Street, Salford",53.4847034,-2.2573132
-Islington Park,Salford,53.48284280000001,-2.2588203
-Cotton Field Park,"6LN, Cotton Street, Manchester",53.4825884,-2.2241188
-Green Grosvenor Park,"Clarence Street, Salford",53.49367549999999,-2.2630233
-Moss Side Adventure Playground,"21 Whitnall Street, Manchester",53.45698599999999,-2.251856
-Philips Park,"Stuart Street, Manchester",53.4875167,-2.1938502
-Blue Peter Garden,Manchester,53.4724328,-2.2971424
-Orbit,"Parkway Business Centre, 300 Princess Road, Manchester",53.4467703,-2.2451384
-Manley Park,"2 Westminster Avenue, Manchester",53.4485471,-2.2688001
+Name,Latitude,Longitude,Type
+Dane Bank Green Space,53.4525613,-2.1456998,park
+Bowerfold Open Space,53.4136131,-2.1750435,park
+New Islington Green,53.480358,-2.2213649,park
+Ardwick Green Park,53.4714155,-2.2243373,park
+Brunswick Park,53.4662014,-2.2317638,park
+Green Grosvenor Park,53.49367549999999,-2.2630233,park
+St Michael's Flags & Angel Meadow Park,53.4891109,-2.2360412,park
+Cale Green Park,53.3933528,-2.1559718,park
+Saint John's Gardens,53.47798090000001,-2.2527881,park
+Birchfields Park,53.4513262,-2.2118217,park
+Parsonage Gardens,53.4825619,-2.2483852,park
+Nutsford Vale Park,53.4539025,-2.1857162,park
+Hulme Park,53.4687721,-2.2522356,park
+Ryebank Fields,53.4478213,-2.286114,park
+Timperley Green,53.3975379,-2.3125279,park
+The Vimto Park,53.47549679999999,-2.2341494,park
+Wythenshawe Park and Gardens,53.4038816,-2.2805093,park
+Alexandra Park - Oldham,53.5340801,-2.1053567,park
+Debdale Park,53.4603086,-2.1545679,park
+Peel Park,53.48751470000001,-2.2707261,park
+Ivy Green,53.4374017,-2.2913772,park
+Buile Hill Park,53.4900874,-2.3032413,park
+Mersey Vale Nature Park,53.4070279,-2.1914152,park
+Hullard Park,53.4619851,-2.2676868,park
+Lower Memorial Park,53.51068970000001,-2.1709625,park
+Haughton Dale Nature Reserve,53.4402263,-2.092571,tourist_attraction
+Haughton Green Playing Fields,53.4419079,-2.1030832,park
+Thornfield Park,53.417461,-2.1934595,park
+Victoria Mill Park,53.4891708,-2.2155931,park
+Royton Park,53.5685976,-2.1226062,park
+Werneth Park,53.5326597,-2.1308708,park
+Heaton Moor Park,53.4259122,-2.1855075,park
+Albert Park,53.4999057,-2.2642515,park
+Gatley Carrs,53.39730609999999,-2.2406376,tourist_attraction
+Fletcher Moss Botanical Gardens,53.4097528,-2.2336973,park
+Didsbury Park,53.41424989999999,-2.22797,park
+Golden Hill Park,53.4517962,-2.3550674,park
+Close Park,53.5643202,-2.3035609,park
+Manley Park,53.4485471,-2.2688001,park
+Victoria Park,53.4485888,-2.3111388,park
+Bluebell Green,53.4445802,-2.1843494,park
+Eccles Recreation Ground,53.4814087,-2.3437766,park
+Stoneleigh Park,53.55437209999999,-2.096449,park
+Three Sisters,53.4937441,-2.3385899,park
+Duke's Drive,53.49466,-2.360926,park
+Alexandra Park,53.4515621,-2.2493204,park
+Ancoats Green,53.48704559999999,-2.2242621,park
+Coalshaw Green Park,53.52748080000001,-2.1473846,park
+Philips Park,53.4875167,-2.1938502,park
+St. Thomas Recreation Park,53.4035933,-2.1457464,park
+Grass Roots Oldham Women's (GROW) Enterprise,53.50588639999999,-2.16405,park
+Fletcher Moss Botanical Garden,53.4088933,-2.229719,park
+"Philips Park, Prestwich",53.5308906,-2.3067353,park
+John Leigh Park,53.3919292,-2.3559388,park
+Whitworth Park,53.4590434,-2.230085,park
+Blackleach Country Park,53.5326946,-2.3944544,tourist_attraction
+Victoria Park,53.5088359,-2.3275278,park
+MASFL,53.4410884,-2.2929051,park
+The Quadrants,53.4410168,-2.1866857,park
+Seymour Park,53.4597815,-2.2725549,park
+Dane Bank Green Space,53.4525613,-2.1456998,park
+Bowerfold Open Space,53.4136131,-2.1750435,park
+New Islington Green,53.480358,-2.2213649,park
+Ardwick Green Park,53.4714155,-2.2243373,park
+Urban Green Space Ltd.,53.4815222,-2.2566534,general_contractor
+West Point Gardens,53.4454269,-2.1989889,park
+Brunswick Park,53.4662014,-2.2317638,park
+Nutsford Vale Park,53.4539025,-2.1857162,park
+St Michael's Flags & Angel Meadow Park,53.4891109,-2.2360412,park
+Saint John's Gardens,53.47798090000001,-2.2527881,park
+Birchfields Park,53.4513262,-2.2118217,park
+The Vimto Park,53.47549679999999,-2.2341494,park
+Ryebank Fields,53.4478213,-2.286114,park
+Parsonage Gardens,53.4825619,-2.2483852,park
+Hulme Park,53.4687721,-2.2522356,park
+Urban Green,53.4845188,-2.2536471,point_of_interest
+Fletcher Moss Botanical Gardens,53.4097528,-2.2336973,park
+Peel Park,53.48751470000001,-2.2707261,park
+Wythenshawe Park and Gardens,53.4038816,-2.2805093,park
+Albert Park,53.4999057,-2.2642515,park
+Grass Roots Oldham Women's (GROW) Enterprise,53.50588639999999,-2.16405,park
+The Quadrants,53.4410168,-2.1866857,park
+Green Fish Resource Centre | Ethical Property,53.4832319,-2.2345413,real_estate_agency
+Duke's Drive,53.49466,-2.360926,park
+Hullard Park,53.4619851,-2.2676868,park
+Three Sisters,53.4937441,-2.3385899,park
+Bluebell Green,53.4445802,-2.1843494,park
+Victoria Park,53.5088359,-2.3275278,park
+Eccles Recreation Ground,53.4814087,-2.3437766,park
+The Green,53.5147573,-2.1453659,park
+Whitworth Park,53.4590434,-2.230085,park
+Gorse Hill Park,53.4556477,-2.2945381,park
+Ancoats Green,53.48704559999999,-2.2242621,park
